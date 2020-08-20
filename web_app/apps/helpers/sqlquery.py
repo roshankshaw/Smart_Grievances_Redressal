@@ -7,6 +7,7 @@ from apps.helpers.datadict import keyword_dict
 
 # top 10 keywords from a given dept(user selected)[dict]
 # top 10 tweets in that dept [list]
+current_path = r'D:\Working with GIT\Grievances Mangement System\web_app\apps\helpers\complaint_data.db' #change path
 
 def top_by_dept(dept_name):
 	'''
@@ -14,7 +15,7 @@ def top_by_dept(dept_name):
 	params:
 	dept_name : string
 	'''
-	conn = sqlite3.connect(r'F:\vedant_data\Smart_Grievances_Redressal\web_app\apps\helpers\complaint_data.db') #change path here
+	conn = sqlite3.connect(current_path) #change path here
 	c = conn.cursor()
 	counts = []
 	keyword = []
@@ -44,7 +45,7 @@ def top_tweets(keyword_name):
 		params:
 		dept_name : string
 	'''
-	conn = sqlite3.connect(r'F:\vedant_data\Smart_Grievances_Redressal\web_app\apps\helpers\complaint_data.db') #change path here
+	conn = sqlite3.connect(current_path) #change path here
 	c = conn.cursor()
 
 	tweets = []
